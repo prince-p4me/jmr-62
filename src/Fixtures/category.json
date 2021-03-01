@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "link_type": "dfh",
+    "name": "DFH",
+    "description": "Ghar ka Khana",
+    "url": "https://youngbutterfly.in/wp-content/uploads/2020/01/GHAR-KA-KHANA-COOKING-CLASS-at-Andheri-1.jpeg",
+    "category_image": "http://dev.justmyroots.com/uploads/product_category/1category_image.jpg",
+    "banner": "http://dev.justmyroots.com/uploads/product_category/1banner.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Sweets",
+    "link_type": "category",
+    "description": "Sweets",
+    "category_image": "http://dev.justmyroots.com/uploads/product_category/1category_image.jpg",
+    "banner": "http://dev.justmyroots.com/uploads/product_category/1banner.jpg",
+    "url": "https://youngbutterfly.in/wp-content/uploads/2020/01/GHAR-KA-KHANA-COOKING-CLASS-at-Andheri-1.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "Beverages",
+    "link_type": "category",
+    "description": "Tea, Coffee and juices",
+    "category_image": "http://dev.justmyroots.com/uploads/product_category/2category_image.jpg",
+    "banner": "http://dev.justmyroots.com/uploads/product_category/2banner.jpg",
+    "url": "https://youngbutterfly.in/wp-content/uploads/2020/01/GHAR-KA-KHANA-COOKING-CLASS-at-Andheri-1.jpeg"
+  },
+  {
+    "id": "4",
+    "name": "Sweets",
+    "description": "Sweets",
+    "link_type": "category",
+    "category_image": "http://dev.justmyroots.com/uploads/product_category/1category_image.jpg",
+    "banner": "http://dev.justmyroots.com/uploads/product_category/1banner.jpg",
+    "url": "https://youngbutterfly.in/wp-content/uploads/2020/01/GHAR-KA-KHANA-COOKING-CLASS-at-Andheri-1.jpeg"
+  }
+]

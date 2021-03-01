@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "heading": "Rakhi Banner",
+    "link_type": "P",
+    "param": "1",
+    "detail": "4787",
+    "url": "http://dev.justmyroots.com/uploads/hbanners/1image.jpg"
+  },
+  {
+    "id": "2",
+    "heading": "Just My Roots",
+    "link_type": "C",
+    "param": "1",
+    "detail": "cooked food",
+    "url": "http://dev.justmyroots.com/uploads/hbanners/2image.jpg"
+  }
+]

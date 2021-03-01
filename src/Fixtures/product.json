@@ -1,0 +1,57 @@
+{
+  "id": "2",
+  "name": "Assam Tea",
+  "shortDescription": "<p>Assam Tea</p>",
+  "price": "Rs 276-395",
+  "description": "<p>Assam tea </p>",
+  "handlingDetails": "<p>Handle with care</p>",
+  "safetyDetails": "<p>Keep at controlled temp</p>",
+  "preventionDetails": "<p><br></p>",
+  "numOfImgs": "3",
+  "images": [
+    {
+      "image": "http://dev.justmyroots.com/uploads/product_image/product_2_1.jpg",
+      "thumb": "http://dev.justmyroots.com/uploads/product_image/product_2_1_thumb.jpg"
+    },
+    {
+      "image": "http://dev.justmyroots.com/uploads/product_image/product_2_2.jpg",
+      "thumb": "http://dev.justmyroots.com/uploads/product_image/product_2_2_thumb.jpg"
+    },
+    {
+      "image": "http://dev.justmyroots.com/uploads/product_image/product_2_3.jpg",
+      "thumb": "http://dev.justmyroots.com/uploads/product_image/product_2_3_thumb.jpg"
+    }
+  ],
+  "shops": [
+    {
+      "shopId": "2",
+      "shopName": "Delhi Tea",
+      "productId": "9",
+      "name": "Assam Tea",
+      "city": "Kolkata",
+      "price": "395",
+      "discount": "0",
+      "discountType": "percent",
+      "handlingCharges": "10",
+      "currentStock": "100",
+      "rating": "0",
+      "reviewCount": "0",
+      "sourcingLocationId": "5"
+    },
+    {
+      "shopId": "3",
+      "shopName": "Delhi Tea",
+      "productId": "8",
+      "name": "Assam Tea",
+      "city": "Delhi Gurgaon Noida Ghaziabad",
+      "price": "276",
+      "discount": "0",
+      "discountType": "percent",
+      "handlingCharges": "10",
+      "currentStock": "100",
+      "rating": "0",
+      "reviewCount": "0",
+      "sourcingLocationId": "1"
+    }
+  ]
+}

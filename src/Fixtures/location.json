@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Delhi",
+    "image": "http://dev.justmyroots.com/uploads/communities/1logo.jpeg"
+  },
+  {
+    "id": "2",
+    "name": "Kolkata",
+    "image": "http://dev.justmyroots.com/uploads/communities/1logo.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "Jaipur",
+    "image": "http://dev.justmyroots.com/uploads/communities/1logo.jpeg"
+  }
+]
