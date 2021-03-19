@@ -1,5 +1,7 @@
 import React from "react";
-import { Text, Item, Input, Picker } from "native-base";
+import { Text, Item, Picker } from "native-base";
+// import { Picker } from '@react-native-picker/picker';
+
 const FormPicker = ({
   input,
   label,

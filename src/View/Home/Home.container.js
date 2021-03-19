@@ -63,13 +63,13 @@ class Home extends Component {
     console.warn(jsonResposne)
     // alert(JSON.stringify(jsonResposne))
     if (Platform.OS == 'android') {
-      if (jsonResposne.android_version != '0.3.2') {
+      if (jsonResposne.android_version != '0.3.3') {
         this.props.navigation.navigate('ForceUpdateScreen')
         return;
       }
     }
     if (Platform.OS == 'ios') {
-      if (jsonResposne.android_version != '1.1') {
+      if (jsonResposne.ios_version != '1.1') {
         this.props.navigation.navigate('ForceUpdateScreen')
         return;
       }

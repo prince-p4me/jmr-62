@@ -30,7 +30,8 @@ const OtpForm = ({
   reset,
   submitting,
   mobile,
-  fetching
+  fetching,
+  sendOtp
 }) => (
   <Container>
     <Content padder>
@@ -44,10 +45,11 @@ const OtpForm = ({
         />
 
         <ButtonWithLoader
-          fetching={fetching}
+          // fetching={fetching}
           title="Verify"
           onPress={handleSubmit}
         />
+
       </Form>
     </Content>
   </Container>
