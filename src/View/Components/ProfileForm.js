@@ -29,7 +29,7 @@ const ProfileForm = ({ handleSubmit, register, fetching }) => (
       validate={[FormValidation.required, FormValidation.email]}
       placeholder="Enter Email"
     />
-    <Field
+    {/* <Field
       name="dob"
       type="default"
       component={FormDatePicker}
@@ -40,7 +40,7 @@ const ProfileForm = ({ handleSubmit, register, fetching }) => (
       type="default"
       component={FormDatePicker}
       placeholder="Date of Anniversary"
-    />
+    /> */}
     {register && <Field
       name="referralCode"
       type="default"

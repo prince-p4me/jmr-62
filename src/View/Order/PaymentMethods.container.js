@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import { Clipboard } from "react-native";
+import { BackHandler } from "react-native";
 import actions from "../../Store/Redux/order";
 import PaymentMethodsPage from "./PaymentMethods.page";
 import { Toast } from "native-base";
 import Constant from "../../Services/Constant";
-
+import cartActions from "../../Store/Redux/cart";
 class PaymentMethods extends Component {
   componentDidMount() {
     if (this.props.navigation.state.params.flow == Constant.DFH_FLOW) {
@@ -27,6 +27,7 @@ class PaymentMethods extends Component {
       console.warn(parameters)
       this.props.paymentMethodsRequest(parameters);
     }
+
   }
 
   selectPaymentMethod = method => {
@@ -133,6 +134,7 @@ class PaymentMethods extends Component {
         paymentMethods={this.props.paymentMethods}
         selectPaymentMethod={this.selectPaymentMethod}
         createOrder={this.createOrder}
+        emptyCart={this.props.emptyCart}
       />
     );
   }
@@ -162,8 +164,10 @@ const mapStateToProps = ({
   orderSummary: dfh.orderSummary,
   dfh: dfh
 });
-
-const mapDispatchToProps = actions;
+const mapDispatchToProps = {
+  ...actions,
+  ...cartActions,
+};
 export default connect(
   mapStateToProps,
   mapDispatchToProps
