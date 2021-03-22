@@ -63,7 +63,8 @@ class Home extends Component {
     console.warn(jsonResposne)
     // alert(JSON.stringify(jsonResposne))
     if (Platform.OS == 'android') {
-      if (jsonResposne.android_version > '0.3.1') {
+      console.warn(jsonResposne.android_version)
+      if (jsonResposne.android_version != '0.3.3') {
         this.props.navigation.navigate('ForceUpdateScreen')
         return;
       }

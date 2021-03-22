@@ -28,7 +28,7 @@ class PaymentGateway extends Component {
   }
   mainHandlerFunciton = () => {
     this.props.emptyCart()
-    this.props.navigation.navigate('Home');
+    this.props.navigation.navigate('Cart');
   }
   componentWillUnmount = () => {
     BackHandler.removeEventListener('hardwareBackPress')

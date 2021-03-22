@@ -4,9 +4,10 @@ import actions from "../../Store/Redux/authentication";
 import MorePage from "./More.page";
 import { Toast } from "native-base";
 import CustomHeader from "../Components/CustomHeader";
-
+import cartActions from "../../Store/Redux/cart";
 class More extends Component {
   logout = () => {
+    this.props.emptyCart();
     this.props.logout();
     Toast.show({
       text: "Logged Out",
@@ -64,8 +65,7 @@ const mapStateToProps = ({ authentication }) => ({
   token: authentication.token
 });
 
-const mapDispatchToProps = actions;
-
+const mapDispatchToProps = { ...actions, ...cartActions };
 export default connect(
   mapStateToProps,
   mapDispatchToProps
