@@ -132,8 +132,8 @@ android {
         applicationId "com.cre8comm.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 123
-        versionName "0.3.3"
+        versionCode 124
+        versionName "0.3.4"
     }
     splits {
         abi {

@@ -68,7 +68,10 @@ const create = (baseURL = Constant.API_URL) => {
   const getShops = parameters => api.post("getShops", parameters);
   const setPincode = parameters => api.post("setPincode", parameters)
   const setFtype = parameters => api.post("setFoodPref", parameters)
-  const sendOtp = parameters => api.post("sendOTP", parameters);
+  const sendOtp = parameters => {
+    console.log("api parameters", parameters)
+    return api.post("sendOTP", parameters)
+  };
   const getRefferralData = parameters => api.post("getReferralPage", parameters);
   const verifyMobile = parameters => api.post("verifyMobile", parameters);
   const registerProfile = parameters => api.post("registerOTP", parameters);

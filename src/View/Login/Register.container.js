@@ -7,6 +7,17 @@ import { Toast } from "native-base";
 import moment from "moment";
 
 class Register extends Component {
+  state = {
+    callingCode: ""
+  }
+
+  componentDidMount = () => {
+    // console.log("callingCode", this.props);
+    const { navigation } = this.props;
+    const callingCode = navigation.state?.params?.callingCode;
+    this.setState({ callingCode });
+  }
+
   register = form => {
     if (form.dob) {
       form.dob = moment(form.dob).format("DD/MM/YYYY");
@@ -15,16 +26,19 @@ class Register extends Component {
       form.anniversary = moment(form.anniversary).format("DD/MM/YYYY");
     }
     form.mobile = this.props.mobile;
+    form.callingCode = this.state.callingCode;
     this.props.registerProfileRequest(form);
   };
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     console.log("nextProps", nextProps);
-    const { fetching, processed, tempToken, token } = nextProps;
+    const { fetching, processed, navigation, token } = nextProps;
+    const callingCode = navigation.state?.params?.callingCode;
+
     if (processed && !fetching && nextProps.authentication.status) {
       // this.props.navigation.popToTop(); // Reset all modal of modal stacks. (this is available since 1.0.0 I think).
       // this.props.navigation.goBack(null); // Then close modal itself to display the main app screen nav.
-      this.props.navigation.navigate("Otp");
+      this.props.navigation.navigate("Otp", { callingCode });
       Toast.show({
         text: "OTP sent Successfully",
         buttonText: "Okay",

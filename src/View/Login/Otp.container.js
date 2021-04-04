@@ -12,11 +12,17 @@ class Otp extends Component {
   state = {
     otpSend: 'false',
     errorState: 'false',
-    mobile: ""
+    mobile: "",
+    callingCode: ""
   }
 
   componentDidMount = () => {
-    this.setState({ mobile: this.props.mobile });
+    const { navigation } = this.props;
+    const callingCode = navigation.state?.params?.callingCode;
+    this.setState({
+      mobile: this.props.mobile,
+      callingCode
+    });
   }
 
   verifyOtp = ({ otp }) => {
@@ -27,22 +33,23 @@ class Otp extends Component {
   };
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    const { verified, processed, tempToken, token } = nextProps;
-    const { otpSend, } = nextState
+    const { verified, mobile, processed, navigation, token } = nextProps;
+    const { otpSend } = nextState
+    const callingCode = navigation.state?.params?.callingCode;
+
     console.log("nextProps OTP container", nextProps)
     let message = null;
     if (otpSend == true) {
       message = "OTP resend successful";
       this.setState({ otpSend: false })
     }
-    // else if (processed && !verified) {
-    //   message = "OTP did not match";
-    // }
     if (processed && verified && token) {
       this.props.navigation.popToTop(); // Reset all modal of modal stacks. (this is available since 1.0.0 I think).
       this.props.navigation.goBack(null); // Then close modal itself to display the main app screen nav.
     }
-
+    if (callingCode && callingCode != "91" && processed && verified && token) {
+      message = "OTP has been sent to the registered email address . . .";
+    }
     if (message) {
       Toast.show({
         text: message,
@@ -50,14 +57,13 @@ class Otp extends Component {
         duration: 3000
       });
     }
-
     return true;
   }
 
   sendOtp = mobile => {
     console.warn('called')
     this.setState({ otpSend: true }, () => {
-      this.props.sendOtpRequest({ mobile });
+      this.props.sendOtpRequest({ mobile, callingCode: this.state.callingCode });
     })
   };
 
