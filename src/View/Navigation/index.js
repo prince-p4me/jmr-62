@@ -7,6 +7,7 @@ import { createAppContainer } from 'react-navigation';
 import LoginNavigator from "./LoginNavigator";
 import OffersScreen from "../Offers/index";
 import Refferal from "../Refferal";
+import ContactUs from "../../View/ContactUs/index";
 import RefferalMore from "../RefferalMore";
 import ForceUpdateScreen from '../ForceUpdate/index'
 
@@ -16,6 +17,7 @@ const RootStack = createStackNavigator(
     LaunchNavigator: { screen: LaunchNavigator },
     LoginNavigator: { screen: LoginNavigator },
     Offers: { screen: OffersScreen },
+    ContactUs: { screen: ContactUs },
     Refferal: { screen: Refferal },
     RefferalMore: { screen: RefferalMore },
     ForceUpdateScreen: { screen: ForceUpdateScreen }

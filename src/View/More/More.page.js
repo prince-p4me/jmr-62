@@ -22,10 +22,11 @@ const More = ({ token, menu, navigation }) => {
           {token ? (
             <MenuItem menu={menu.profile} />
           ) : (
-              <MenuItem menu={menu.login} />
-            )}
+            <MenuItem menu={menu.login} />
+          )}
           {token ? <MenuItem menu={menu.myOrders} /> : null}
           {token ? <MenuItem menu={menu.myRefferrals} /> : null}
+          <MenuItem menu={menu.contactUs} />
           {token ? <MenuItem menu={menu.logout} /> : null}
         </List>
       </Content>

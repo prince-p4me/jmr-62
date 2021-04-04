@@ -36,6 +36,12 @@ class More extends Component {
       title: "My Orders",
       menuClicked: () => this.props.navigation.navigate("MyOrders")
     },
+    contactUs: {
+      icon: "help",
+      title: "Contact US",
+      // subtitle: "JMR#11",
+      menuClicked: () => this.props.navigation.navigate("ContactUs")
+    },
     myRefferrals: {
       icon: "users",
       title: "My Referrals",

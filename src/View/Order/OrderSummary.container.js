@@ -44,10 +44,12 @@ class OrderSummary extends Component {
       }
     }
   }
+
   fetchLoyaltyPoints() {
     this.props.loyaltyPointsRequest({ token: this.props.token });
     // this.props.loyaltyPointsRequest(this.props.token);
   }
+
   // shouldComponentUpdate(nextProps, nextState, nextContext) {
   //   const { couponStatus, fetching, useLoyaltyPoints } = nextProps;
   //   if (useLoyaltyPoints != this.props.useLoyaltyPoints) {
@@ -70,6 +72,7 @@ class OrderSummary extends Component {
   //   }
   //   return true;
   // }
+
   fetchOrderSummary = () => {
     let {
       shippingLocation,
@@ -122,8 +125,8 @@ class OrderSummary extends Component {
         useLoyaltyPoints={this.props.useLoyaltyPoints}
       />
     ) : (
-        <LoadingIndicator />
-      );
+      <LoadingIndicator />
+    );
   }
 }
 

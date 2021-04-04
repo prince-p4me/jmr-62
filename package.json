@@ -20,6 +20,7 @@
     "native-base": "^2.15.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
+    "react-native-country-code-list": "^1.1.2",
     "react-native-flatlist-slider": "^1.0.5",
     "react-native-gesture-handler": "^1.10.2",
     "react-native-loading-spinner-overlay": "^2.0.0",

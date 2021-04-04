@@ -24,10 +24,11 @@ class RefferalMore extends Component {
 
     componentDidMount = async () => {
         // let response = await axios.get('xyz')
+        this.props.refferralRequest({ token: this.props.token });
     }
 
-    onShare = async msg => {
-        let message = msg ? msg : "React native is good framework";
+    onShare = async data => {
+        let message = data.referralMessage + " " + data.referralLink;
         try {
             const result = await Share.share({ message });
             if (result.action === Share.sharedAction) {
@@ -59,7 +60,7 @@ class RefferalMore extends Component {
                     <View style={{ paddingTop: 20, paddingHorizontal: 12 }}>
                         <Title style={{ fontSize: 24, color: colors.ember }}>{data.referralTitle}</Title>
                         <TouchableOpacity activeOpacity={.7} style={styles.shareBtn}
-                            onPress={() => this.onShare()}>
+                            onPress={() => this.onShare(data.userReferral)}>
                             <Title style={{ fontSize: 34, color: "white" }}>
                                 {data.userReferral?.referralCode ? data.userReferral?.referralCode : "JMR#01"}</Title>
                             <Icon style={{ color: "white" }}
